@@ -1,0 +1,5 @@
+body > div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightcyan;
+    /* margin-inline: minmax(50%, 10rem); */
+}
