@@ -1,5 +1,32 @@
-body > div {
+div.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90%;
+    margin: auto;
+}
+div.me {
+    max-width: 90%;
+    margin: auto;
+}
+
+article.tile {
+    background-color: #816DF8;
+    color: #221D42;
+    padding: 1.2em 3em;
+    max-width: 300px;
+    margin: 1em
+}
+body {
+    background-color: darkslateblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: lightcyan;
-    /* margin-inline: minmax(50%, 10rem); */
+}
+
+section.profile {
+    color: white;
+
+}
+.profile > .me > * {
+    margin-top: 0;
+    margin-bottom: 0;
 }
