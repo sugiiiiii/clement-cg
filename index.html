@@ -11,6 +11,9 @@
     <link rel="shortcut icon" href="./src/img/icon.png" type="image/x-icon">
 </head>
 <body class="dark:bg-slate-800 bg-white dark:text-white text-slate-900">
+    <div class="hidden">
+        <ul class="list-disc list-outside ml-6"></ul>
+    </div>
     <!-- -------------------------------------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------------------------------------- -->
@@ -40,43 +43,40 @@
     <!-- -------------------------------------------------------------------------------------------- -->
 
     <section id="galerie" class="galerie grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 lg:w-[50%] md:w-[80%] sm:w-[90%] m-auto"> 
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
         <!--------------------------------------- TEMPLATE ---------------------------------------------------------------->
+
         <template id="projet-template">
             <div class="pj-parent || group shadow-sm bg-white hover:bg-gray-100 ring-1 ring-gray-900/10 transition-all duration-200 rounded-md dark:ring-slate-50/[0.08] dark:bg-slate-800 dark:hover:bg-slate-900" onclick="showPopup()">
                 <img src="./" alt="Image du projet" class="pj-cover || h-32 object-cover w-full object-top rounded-md">
                 <div class="pj-info || p-4 pt-1">
                     <h3 class="pj-title || text-2xl font-bold mt-2 group-hover:text-indigo-500 transition-all duration-200 font-chivo dark:group-hover:text-slate-50 dark:text-slate-300 text-slate-800">Titre</h3>
-                    <p class="pj-desc || text-sm font-light line-clamp-3 opacity-80 mt-1 font-chivo">
-                        <span class="pj-date || font-semibold font-chivo">0000</span>
-                        description
-                    </p>
+                    <p class="text-sm opacity-80 font-chiv"><span class="pj-date">0000</span> · <span class="pj-desc">Personnel</span></p>
                 </div>
             </div>
-            <!-- ---- POP-UP ---- -->
+            <!-- --------------------------------------- POP-UP --------------------------------------- -->
             <div class="pj-pop || hidden fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75 z-50" onclick="hidePopup()">
                 <div class="grid content-center rounded-md bg-slate-100 dark:bg-slate-700 w-[70%] m-auto">
                     <div class="flex flex-row h-[600px] font-chivo">
                         <div class="w-1/3 p-7">
-                            <h1 class="pj-title-pop || text-2xl font-bold text-slate-900 dark:text-white font-unbounded">Titre</h1>
-                            <h2 class="pj-date-pop || text-xl font-bold text-slate-600 dark:text-gray-300 mb-3">0000</h2>
-                            <p class="pj-desc-pop || text-slate-600 dark:text-gray-100">
+                            <h2 class="pj-title-pop || text-2xl font-bold text-slate-900 dark:text-white font-unbounded">Titre</h2>
+                            <h3 class="text-lg font-bold text-slate-600 dark:text-gray-300 mb-4 mt-3"><span class="pj-date-pop || px-3 py-0.5 bg-sky-500/20 text-sky-500 rounded-full mr-1">0000</span> <span class="pj-tag-pop || px-3 py-0.5 bg-sky-500/20 text-sky-500 rounded-full">Personnel</span></h3>
+                            <p class="pj-desc-pop || text-slate-600 dark:text-gray-100 mb-5">
                                 description
                             </p>
                             <button class="bg-sky-500 hover:bg-indigo-500 duration-200 text-white font-[400] py-2 px-4 rounded-lg mt-4 mr-2 hover:shadow-md hover:shadow-indigo-500/50"><i class="pj-link || uil uil-behance"></i> Page Behance</button>
                             <button class="bg-sky-500 hover:bg-indigo-500 duration-200 text-white font-[400] py-2 px-4 rounded-lg mt-4 hover:shadow-md hover:shadow-indigo-500/50"><i class="pj-link || uil uil-arrow-up-right"></i> Actiris</button>
                         </div>
                         <div class="pj-gallery || w-2/3 overflow-y-scroll">
-                          <!-- <img src="./src/img/presentation.webp" alt="Image du projet" class="pj-img || w-full object-cover">
-                          <img src="./src/img/v2.webp" alt="Image du projet" class="pj-img || w-full object-cover"> -->
                         </div>
                     </div>
                 </div>
                 <div class="absolute top-0 right-0 m-3 p-3 hover:bg-black hover:bg-opacity-50 rounded-full">
                     <button onclick="hidePopup()" class="text-white font-bold text-4xl leading-[0]"><i class="uil uil-times"></i></button>
                 </div>
-            </div>
+            </div>      
         </template>
-        <!-- --------------------- -->
+
     </section>
 
     <!-- -------------------------------------------------------------------------------------------- -->

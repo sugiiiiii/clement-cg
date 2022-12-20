@@ -5,6 +5,14 @@
 
 const projets = [
     {
+        title: "Mon Curriculum Vitae",
+        date: "Today",
+        tag: "CV",
+        desc: "Je l'ai décliné en <strong>deux version</strong>: <br><ul class=\"list-disc list-outside ml-6\"><li>Une colorée, destinée au numérique</li><li>Une plus en tracés, pour économiser de l'encre à l'impression</li></ul> ",
+        img: ['./src/img/cv-color-v3.webp','./src/img/cv-print-v3.webp'],
+        links: [["Voir en HD","./src/cv.pdf"],["Télécharger le CV","./src/cv.pdf"]]
+    },
+    {
         title: "Slide design · Actiris",
         date: 2020,
         desc: "Lorem ipsum dolor sid habet",
@@ -15,6 +23,30 @@ const projets = [
         date: 2022,
         desc: "Description test",
         img: ['./src/img/image.jpg', './src/img/moi.png']
+    },
+    {
+        title: "Test 2",
+        date: 2022,
+        desc: "Description test 2",
+        img: ['./src/img/image.jpg']
+    },
+    {
+        title: "Test 2",
+        date: 2022,
+        desc: "Description test 2",
+        img: ['./src/img/image.jpg']
+    },
+    {
+        title: "Test 2",
+        date: 2022,
+        desc: "Description test 2",
+        img: ['./src/img/image.jpg']
+    },
+    {
+        title: "Test 2",
+        date: 2022,
+        desc: "Description test 2",
+        img: ['./src/img/image.jpg']
     },
     {
         title: "Test 2",
@@ -36,7 +68,7 @@ for (const projet of projets) {
     // Remplacez les données du modèle avec les données du film
     projetElement.querySelector(".pj-title").textContent = projet.title;
     projetElement.querySelector(".pj-date").textContent = projet.date;
-    projetElement.querySelector(".pj-desc").textContent = projet.desc;
+    projetElement.querySelector(".pj-desc").textContent = projet.tag;
     projetElement.querySelector(".pj-cover").src = projet.img[0];
 
     projetElement.querySelector(".pj-parent").setAttribute('pj-id', id);
@@ -46,7 +78,8 @@ for (const projet of projets) {
 
     projetElement.querySelector(".pj-title-pop").textContent = projet.title;
     projetElement.querySelector(".pj-date-pop").textContent = projet.date;
-    projetElement.querySelector(".pj-desc-pop").textContent = projet.desc;
+    projetElement.querySelector(".pj-desc-pop").innerHTML = projet.desc;
+    projetElement.querySelector(".pj-tag-pop").textContent = projet.tag;
 
     i = 0
     const pjGallery = projetElement.querySelector(".pj-gallery")
@@ -74,12 +107,13 @@ for (const projet of projets) {
 // -----------------------------------------------------------------
 
 function showPopup() {
-
+    
     // On récuper l'attribut "pj-id" pour identifier le projet
     pjId = event.target.parentElement.getAttribute('pj-id');
-
+    
     // Récupère la popup et l'arrière-plan
     var popup = document.querySelector(`[pj-id="${pjId}"].fixed`);
+    popup.scrollTo(0, 0);
     var backdrop = document.querySelector(`[pj-id="${pjId}"].bg-opacity-75`);
   
     // Affiche la popup et l'arrière-plan
