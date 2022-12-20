@@ -10,50 +10,60 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="shortcut icon" href="./src/img/icon.png" type="image/x-icon">
 </head>
-<body class="bg-slate-800 text-white">
-
+<body class="dark:bg-slate-800 bg-white dark:text-white text-slate-900">
     <!-- -------------------------------------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------------------------------------- -->
 
-    <section class="profile flex items-center justify-center flex-col mt-14 mb-12">
-        <div class="rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 || w-[8em] h-[8em] flex items-center justify-center">
-          <img src="./src/img/moi.png" class="rounded-full w-24 h-24 ring-slate-800 ring-8" alt="Image ronde de moi">
+    <section class="grid lg:w-[50%] md:w-[80%] sm:w-[90%] m-auto justify-end h-0 mt-7">
+        <div class="group h-[3em] w-[3em]" onclick="toggleDarkMode()">
+            <svg  id="dark-icon" xmlns="http://www.w3.org/2000/svg" class="rounded-full transition-all duration-200 p-2 ||  fill-indigo-500 bg-indigo-500 bg-opacity-20 dark:fill-slate-50 dark:bg-slate-50 dark:bg-opacity-10 || hover:bg-opacity-100 hover:fill-slate-50 dark:hover:bg-opacity-100 dark:hover:fill-slate-800" viewBox="0 0 24 24">
+                <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
+            </svg>
         </div>
-        <h1 class="text-3xl font-medium mt-4 font-unbounded">Clément Cœugniet</h1>
-        <h2 class="text-lg mt-2 font-poppins">Graphic designer</h2>
     </section>
 
     <!-- -------------------------------------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------------------------------------- -->
 
-    <section id="galerie" class="galerie grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 lg:w-[50%] md:w-[80%] sm:w-[90%] m-auto">
-        
+    <section class="profile flex items-center justify-center flex-col mt-8 mb-12">
+        <div class="rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 || w-[8em] h-[8em] flex items-center justify-center">
+          <img src="./src/img/moi.png" class="select-none rounded-full w-24 h-24 dark:ring-slate-800 ring-white ring-8" alt="Image ronde de moi">
+        </div>
+        <h1 class="text-3xl font-medium mt-4 font-unbounded select-none">Clément Cœugniet</h1>
+        <h2 class="text-lg mt-2 font-chivo select-none">Graphic designer</h2>
+    </section>
+
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------------------- -->
+
+    <section id="galerie" class="galerie grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 lg:w-[50%] md:w-[80%] sm:w-[90%] m-auto"> 
         <!--------------------------------------- TEMPLATE ---------------------------------------------------------------->
         <template id="projet-template">
-            <div class="pj-parent || shadow-md hover:shadow-none transition-shadow duration-200 bg-slate-700 rounded-md overflow-hidden" onclick="showPopup()">
-                <img src="./src/img/presentation.webp" alt="Image du projet" class="pj-cover || h-32 object-cover w-full object-top">
+            <div class="pj-parent || group shadow-sm bg-white hover:bg-gray-100 ring-1 ring-gray-900/10 transition-all duration-200 rounded-md dark:ring-slate-50/[0.08] dark:bg-slate-800 dark:hover:bg-slate-900" onclick="showPopup()">
+                <img src="./" alt="Image du projet" class="pj-cover || h-32 object-cover w-full object-top rounded-md">
                 <div class="pj-info || p-4 pt-1">
-                    <h3 class="pj-title || text-2xl font-bold mt-2">Titre</h3>
-                    <p class="pj-desc || text-sm font-light line-clamp-3 opacity-80 mt-1">
-                        <span class="pj-date || font-semibold">0000</span>
+                    <h3 class="pj-title || text-2xl font-bold mt-2 group-hover:text-indigo-500 transition-all duration-200 font-chivo dark:group-hover:text-slate-50 dark:text-slate-300 text-slate-800">Titre</h3>
+                    <p class="pj-desc || text-sm font-light line-clamp-3 opacity-80 mt-1 font-chivo">
+                        <span class="pj-date || font-semibold font-chivo">0000</span>
                         description
                     </p>
                 </div>
             </div>
             <!-- ---- POP-UP ---- -->
             <div class="pj-pop || hidden fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75 z-50" onclick="hidePopup()">
-                <div class="grid content-center rounded-md bg-slate-700 w-[70%] m-auto">
-                    <div class="flex flex-row h-[600px]">
+                <div class="grid content-center rounded-md bg-slate-100 dark:bg-slate-700 w-[70%] m-auto">
+                    <div class="flex flex-row h-[600px] font-chivo">
                         <div class="w-1/3 p-7">
-                            <h1 class="pj-title-pop || text-2xl font-bold text-white">Titre</h1>
-                            <h2 class="pj-date-pop || text-xl font-bold text-gray-300 mb-3">0000</h2>
-                            <p class="pj-desc-pop || text-gray-100">
+                            <h1 class="pj-title-pop || text-2xl font-bold text-slate-900 dark:text-white font-unbounded">Titre</h1>
+                            <h2 class="pj-date-pop || text-xl font-bold text-slate-600 dark:text-gray-300 mb-3">0000</h2>
+                            <p class="pj-desc-pop || text-slate-600 dark:text-gray-100">
                                 description
                             </p>
-                            <button class="bg-sky-500 hover:bg-indigo-500 duration-200 text-white font-bold py-2 px-4 rounded-lg mt-4 mr-2"><i class="pj-link || uil uil-behance"></i> Page Behance</button>
-                            <button class="bg-sky-500 hover:bg-indigo-500 duration-200 text-white font-bold py-2 px-4 rounded-lg mt-4"><i class="pj-link || uil uil-arrow-up-right"></i> Actiris</button>
+                            <button class="bg-sky-500 hover:bg-indigo-500 duration-200 text-white font-[400] py-2 px-4 rounded-lg mt-4 mr-2 hover:shadow-md hover:shadow-indigo-500/50"><i class="pj-link || uil uil-behance"></i> Page Behance</button>
+                            <button class="bg-sky-500 hover:bg-indigo-500 duration-200 text-white font-[400] py-2 px-4 rounded-lg mt-4 hover:shadow-md hover:shadow-indigo-500/50"><i class="pj-link || uil uil-arrow-up-right"></i> Actiris</button>
                         </div>
                         <div class="pj-gallery || w-2/3 overflow-y-scroll">
                           <!-- <img src="./src/img/presentation.webp" alt="Image du projet" class="pj-img || w-full object-cover">
@@ -67,8 +77,38 @@
             </div>
         </template>
         <!-- --------------------- -->
-
     </section>
+
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------------------- -->
+
+    <footer class="dark:bg-slate-900 bg-slate-100 text-slate-900 dark:text-white py-10 flex justify-between items-center absolute bottom-0 w-[100%]">
+        <div class="w-[50%] m-auto flex justify-between lg:flex-row md:flex-col sm:flex-col md:gap-3">
+            <div class="text-left sm:text-center sm:mb-5">
+              <h2 class="text-2xl font-bold font-unbounded">Clément Cœugniet</h2>
+              <span class="text-lg font-chivo">Graphic designer</span> <!-- Et Web Dev ? :) -->
+            </div>
+            <div class="self-center lg:block hidden">
+                <a href="https://github.com/sugiiiiii" target="_blank" class="text-xl rounded-full || hover:text-indigo-500 hover:bg-indigo-500 hover:bg-opacity-20 px-5 py-0.5"><i class="uil uil-github"></i></a>
+                <a href="https://www.behance.net/clementcsugi" target="_blank" class="text-xl rounded-full || hover:text-indigo-500 hover:bg-indigo-500 hover:bg-opacity-20 px-5 py-0.5"><i class="uil uil-behance"></i></a>
+                <a href="https://www.linkedin.com/in/cl%C3%A9ment-cgnt-525381131/" target="_blank" class="text-xl rounded-full || hover:text-indigo-500 hover:bg-indigo-500/20 px-5 py-0.5"><i class="uil uil-linkedin"></i></a>
+                <a href="#" id="mailLink" target="_blank" class="group relative text-xl rounded-full || hover:text-indigo-500 hover:bg-indigo-500 hover:bg-opacity-20 px-5 py-0.5">
+                    <i class="uil uil-at group-hover:hidden"></i>
+                    <i class="uil uil-clipboard-notes group-hover:inline group-active:hidden hidden"></i>
+                    <i class="uil uil-check group-active:inline hidden"></i>
+                    <div class="absolute group-hover:inline-block group-hover:opacity-75 group-hover:z-10 right-0 bg-indigo-500/20 text-indigo-500 py-1 hidden px-4 rounded-full group-hover:top-[-2.5rem] font-chivo">clement.coeugniet@isfsc.be</div>
+                </a>
+            </div>
+
+            <div class="self-center md:block lg:hidden">
+                <a href="https://github.com/sugiiiiii" target="_blank" class="text-xl rounded-full || hover:text-indigo-500 hover:bg-indigo-500 hover:bg-opacity-20 px-5 py-0.5"><i class="uil uil-github"></i></a>
+                <a href="https://www.behance.net/clementcsugi" target="_blank" class="text-xl rounded-full || hover:text-indigo-500 hover:bg-indigo-500 hover:bg-opacity-20 px-5 py-0.5"><i class="uil uil-behance"></i></a>
+                <a href="https://www.linkedin.com/in/cl%C3%A9ment-cgnt-525381131/" target="_blank" class="text-xl rounded-full || hover:text-indigo-500 hover:bg-indigo-500/20 px-5 py-0.5"><i class="uil uil-linkedin"></i></a>
+                <a href="mailto:clement.coeugniet@isfsc.be" target="_blank" class="text-xl rounded-full || hover:text-indigo-500 hover:bg-indigo-500 hover:bg-opacity-20 px-5 py-0.5"><i class="uil uil-at"></i></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
