@@ -5,17 +5,17 @@
 
 /* Masque la scrollbar par défaut */
 ::-webkit-scrollbar {
-    width: 0.4rem;
-    background-color: transparent;
-  }
+  width: 0.4rem;
+  background-color: transparent;
+}
   
-  /* Style du "thumb" de la scrollbar (la partie qui se déplace) */
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 0.25rem;
-  }
-  
-  /* Style du "track" de la scrollbar (la partie vide) */
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
+/* Style du "thumb" de la scrollbar (la partie qui se déplace) */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+
+/* Style du "track" de la scrollbar (la partie vide) */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
