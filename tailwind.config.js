@@ -7,7 +7,7 @@ module.exports = {
             fontFamily: {
                 'poppins': ['Poppins', 'sans-serif'],
                 'unbounded': ['"Unbounded"', 'sans-serif'],
-                'chivo': ['Chivo Mono', 'monospace']
+                'chivo': ['Chivo', 'sans-serif']
             }
         },
     },

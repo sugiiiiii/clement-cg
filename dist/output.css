@@ -531,6 +531,21 @@ video {
 .mr-2 {
   margin-right: 0.5rem;
 }
+.mt-20 {
+  margin-top: 5rem;
+}
+.mt-44 {
+  margin-top: 11rem;
+}
+.mt-32 {
+  margin-top: 8rem;
+}
+.mt-24 {
+  margin-top: 6rem;
+}
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
 .flex {
   display: flex;
 }
@@ -625,6 +640,9 @@ video {
 }
 .overflow-y-scroll {
   overflow-y: scroll;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 .rounded-full {
   border-radius: 9999px;
@@ -736,14 +754,11 @@ video {
 .pt-1 {
   padding-top: 0.25rem;
 }
-.text-left {
-  text-align: left;
-}
 .font-unbounded {
   font-family: "Unbounded", sans-serif;
 }
 .font-chivo {
-  font-family: Chivo Mono, monospace;
+  font-family: Chivo, sans-serif;
 }
 .text-3xl {
   font-size: 1.875rem;
@@ -780,6 +795,12 @@ video {
 }
 .leading-\[0\] {
   line-height: 0;
+}
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+.tracking-tight {
+  letter-spacing: -0.025em;
 }
 .text-slate-900 {
   --tw-text-opacity: 1;
@@ -919,6 +940,12 @@ video {
 .group:hover .group-hover\:opacity-75 {
   opacity: 0.75;
 }
+.group:active .group-active\:top-\[-2\.5rem\] {
+  top: -2.5rem;
+}
+.group:active .group-active\:inline-block {
+  display: inline-block;
+}
 .group:active .group-active\:inline {
   display: inline;
 }
@@ -1008,6 +1035,10 @@ video {
 }
 @media (min-width: 768px) {
 
+  .md\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1026,6 +1057,10 @@ video {
 
   .md\:gap-3 {
     gap: 0.75rem;
+  }
+
+  .md\:text-center {
+    text-align: center;
   }
 }
 @media (min-width: 1024px) {
@@ -1048,5 +1083,9 @@ video {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:text-left {
+    text-align: left;
   }
 }

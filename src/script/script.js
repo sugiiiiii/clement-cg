@@ -8,7 +8,7 @@ const projets = [
         title: "Mon Curriculum Vitae",
         date: "Today",
         tag: "CV",
-        desc: "Je l'ai décliné en <strong>deux version</strong>: <br><ul class=\"list-disc list-outside ml-6\"><li>Une colorée, destinée au numérique</li><li>Une plus en tracés, pour économiser de l'encre à l'impression</li></ul> ",
+        desc: "Je l'ai décliné en <strong>deux version</strong> : <br><ul class=\"list-disc list-outside ml-6\"><li>Une colorée, destinée au numérique</li><li>Une plus en tracés, pour économiser de l'encre à l'impression</li></ul> ",
         img: ['./src/img/cv-color-v3.webp','./src/img/cv-print-v3.webp'],
         links: [["Voir en HD","./src/cv.pdf"],["Télécharger le CV","./src/cv.pdf"]]
     },
