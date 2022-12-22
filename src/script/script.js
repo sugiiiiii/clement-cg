@@ -1,7 +1,7 @@
 // Lancer PostCSS pour update Tailwind == npm run dev
 
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
 
 const projets = [
     {
@@ -13,48 +13,29 @@ const projets = [
         links: [["Voir en HD","./src/cv.pdf"],["Télécharger le CV","./src/cv.pdf"]]
     },
     {
-        title: "Slide design · Actiris",
-        date: 2020,
-        desc: "Lorem ipsum dolor sid habet",
-        img: ['./src/img/presentation.webp']
-    },
-    {  
-        title: "Test",
+        title: "Dossier de sponsoring (4L)",
         date: 2022,
-        desc: "Description test",
-        img: ['./src/img/image.jpg', './src/img/moi.png']
+        tag: "Editorial",
+        desc: `Travail réalisé pour deux amis qui projettent de récolter de l'argent pour financer leur participation au <strong>4L Trophy</strong>,
+        un rallye automobile solidaire à travers le Sahara.`,
+        img: ['./src/img/projet-4L-min.webp'],
+        links: [["Projet Behance","https://www.behance.net/gallery/137474613/4L-Trophy-Sponsoring-file"],["Photographe","https://www.instagram.com/llaridant/"],["4L Trophy","https://www.4ltrophy.com/"]]
     },
     {
-        title: "Test 2",
+        title: "Actiris - Slide design",
         date: 2022,
-        desc: "Description test 2",
-        img: ['./src/img/image.jpg']
-    },
-    {
-        title: "Test 2",
-        date: 2022,
-        desc: "Description test 2",
-        img: ['./src/img/image.jpg']
-    },
-    {
-        title: "Test 2",
-        date: 2022,
-        desc: "Description test 2",
-        img: ['./src/img/image.jpg']
-    },
-    {
-        title: "Test 2",
-        date: 2022,
-        desc: "Description test 2",
-        img: ['./src/img/image.jpg']
-    },
-    {
-        title: "Test 2",
-        date: 2022,
-        desc: "Description test 2",
-        img: ['./src/img/image.jpg']
+        tag: "Graphic Design",
+        desc: `J'ai eu l'occasion de réaliser des travaux pour Actiris, tantôt pour de la communication interne,
+        tantôt pour des supports destinés aux chercheurs d'emploi comme c'est le cas ici.
+        <br><br>
+        Mon travail a été de redéfinir une grammaire visuelle, sur base de la charte graphique d'Actiris, le design des icônes permettant de rythmer la présentation et le remaniement de la mise en page`,
+        img: ['./src/img/actiris-pres.webp', './src/img/actiris-slides.webp'],
+        links: [["Projet Behance","https://www.behance.net/gallery/136868949/Powerpoint-Slide-design"],["Actiris","https://www.actiris.brussels/fr/"]]
     },
 ]
+
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
 
 const projetTemplate = document.querySelector("#projet-template");
 const projetListContainer = document.querySelector("#galerie");
@@ -84,7 +65,7 @@ for (const projet of projets) {
     i = 0
     const pjGallery = projetElement.querySelector(".pj-gallery")
     for (image in projet.img) {
-        projetElement.querySelector(".pj-date-pop").textContent = projet.date;
+        // projetElement.querySelector(".pj-date-pop").textContent = projet.date;
         pjImg = document.createElement('img');
         pjImg.src = projet.img[i];
         pjImg.classList.add("pj-img")
@@ -99,15 +80,45 @@ for (const projet of projets) {
         }
     }
 
+    const pjLinks = projetElement.querySelector(".pj-btns")
+    const linkIcons = {
+        // Mot clef : icon de Iconscout
+        'Voir': 'uil uil-eye',
+        'Télécharger': 'uil uil-arrow-to-bottom',
+        'behance': 'uil uil-behance',
+        'instagram': 'uil uil-instagram',
+        'github': 'uil uil-github',
+        'play.google': 'uil uil-google-play'
+    };
+      
+    for (const link of projet.links) {
+        const [linkText, linkUrl] = link;
+        let iconClass = 'uil uil-arrow-up-right';
+      
+        for (let key in linkIcons) {
+            if (linkUrl.includes(key) || linkText.includes(key)) {
+                iconClass = linkIcons[key];
+                break;
+            }
+        }
+        const pjLink = document.createElement('a');
+        if (linkText.includes('Télécharger')) {
+            pjLink.download = "CV Clément Cœugniet"
+        }
+        pjLink.target = "_blank"
+        pjLink.href = linkUrl
+        pjLink.innerHTML = `<button class="btn-link"><i class="${iconClass}"></i> ${linkText}</button>`;
+        pjLinks.appendChild(pjLink);
+    }
+
     // Ajoutez le nouvel élément à la page
     projetListContainer.appendChild(projetElement);
 }
 
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
 
 function showPopup() {
-    
     // On récuper l'attribut "pj-id" pour identifier le projet
     pjId = event.target.parentElement.getAttribute('pj-id');
     
@@ -121,7 +132,6 @@ function showPopup() {
     backdrop.classList.remove('hidden');
     backdrop.classList.add('grid');
 }
-
   
 function hidePopup() {
     // Récupère toutes les popup
@@ -141,8 +151,8 @@ popups.forEach((popEl) => {
     });
 });
 
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
 
 const toggleDarkMode = () => {
     const darkIcon = document.querySelector("#dark-icon");
@@ -161,6 +171,9 @@ const toggleDarkMode = () => {
       darkIcon.innerHTML = `<path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/>`
     }
 };
+
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
 
 const mailLink = document.querySelector("#mailLink");
 mailLink.addEventListener('click', (event) => {

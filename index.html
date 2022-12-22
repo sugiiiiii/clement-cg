@@ -15,6 +15,7 @@
     <!-- Initier les styles utilisées dans des popup, pour que POSTCSS l'ajoute à l'output tailwind -->
     <div class="hidden">
         <ul class="list-disc list-outside ml-6"></ul>
+        <p class="test">ui</p>
     </div>
     <!-- -------------------------------------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------------------------------------- -->
@@ -58,18 +59,20 @@
             </div>
             <!-- --------------------------------------- POP-UP --------------------------------------- -->
             <div class="pj-pop || hidden fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75 z-50" onclick="hidePopup()">
-                <div class="grid content-center rounded-md bg-slate-100 dark:bg-slate-700 w-[70%] m-auto">
+                <div class="grid content-center rounded-md bg-slate-100 dark:bg-slate-700 lg:w-[70%] sm:w-[85%] m-auto">
                     <div class="flex flex-row h-[600px] font-chivo">
                         <div class="w-1/3 p-7">
                             <h2 class="pj-title-pop || text-2xl font-bold text-slate-900 dark:text-white font-unbounded">Titre</h2>
                             <h3 class="text-lg font-bold text-slate-600 dark:text-gray-300 mb-4 mt-3"><span class="pj-date-pop || px-3 py-0.5 bg-sky-500/20 text-sky-500 rounded-full mr-1">0000</span> <span class="pj-tag-pop || px-3 py-0.5 bg-sky-500/20 text-sky-500 rounded-full">Personnel</span></h3>
                             <p class="pj-desc-pop || text-slate-600 dark:text-gray-100 mb-3">
-                                description
+                                <!-- description -->
                             </p>
-                            <button class="bg-sky-500 hover:bg-indigo-500 duration-200 text-white font-[400] py-2 px-4 rounded-lg mt-4 mr-2 hover:shadow-md hover:shadow-indigo-500/50"><i class="pj-link || uil uil-behance"></i> Page Behance</button>
-                            <button class="bg-sky-500 hover:bg-indigo-500 duration-200 text-white font-[400] py-2 px-4 rounded-lg mt-4 hover:shadow-md hover:shadow-indigo-500/50"><i class="pj-link || uil uil-arrow-up-right"></i> Actiris</button>
+                            <div class="pj-btns">
+                                <!-- buttons -->
+                            </div>
                         </div>
                         <div class="pj-gallery || w-2/3 overflow-y-scroll">
+                            <!-- images -->
                         </div>
                     </div>
                 </div>
@@ -78,13 +81,12 @@
                 </div>
             </div>      
         </template>
-
     </section>
 
     <!-- -------------------------------------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------------------------------------- -->
     <!-- -------------------------------------------------------------------------------------------- -->
-
+    
     <footer class="dark:bg-slate-900 bg-slate-100 text-slate-900 dark:text-white py-10 flex justify-between items-center bottom-0 w-[100%] mt-24">
         <div class="w-[50%] m-auto flex justify-between lg:flex-row md:flex-col sm:flex-col md:gap-3">
             <div class="lg:text-left md:text-center sm:text-center sm:mb-5 md:mb-5">
@@ -112,7 +114,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 <script type="text/javascript" src="./src/script/script.js"></script>
