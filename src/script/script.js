@@ -23,7 +23,7 @@ const projets = [
     },
     {
         title: "Actiris - Slide design",
-        date: 2021,
+        date: 2022,
         tag: "Graphic Design",
         desc: `J'ai eu l'occasion de réaliser des travaux pour Actiris, tantôt pour de la communication interne,
         tantôt pour des supports destinés aux chercheurs d'emploi comme c'est le cas ici.
