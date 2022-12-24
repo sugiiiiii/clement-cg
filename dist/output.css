@@ -492,6 +492,9 @@ video {
 .z-50 {
   z-index: 50;
 }
+.z-30 {
+  z-index: 30;
+}
 .m-auto {
   margin: auto;
 }
@@ -530,6 +533,9 @@ video {
 }
 .mt-24 {
   margin-top: 6rem;
+}
+.mt-auto {
+  margin-top: auto;
 }
 .flex {
   display: flex;
@@ -604,6 +610,9 @@ video {
 }
 .items-center {
   align-items: center;
+}
+.justify-start {
+  justify-content: flex-start;
 }
 .justify-end {
   justify-content: flex-end;
@@ -842,7 +851,7 @@ video {
 }
 
 .btn-link {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-right: 0.5rem;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
