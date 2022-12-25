@@ -177,7 +177,6 @@ function showPopup() {
     
     // Récupère la popup et l'arrière-plan
     var popup = document.querySelector(`[pj-id="${pjId}"].fixed`);
-    popup.scrollTo(0, 0);
     var backdrop = document.querySelector(`[pj-id="${pjId}"].bg-opacity-75`);
   
     // Affiche la popup et l'arrière-plan
