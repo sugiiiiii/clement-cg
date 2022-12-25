@@ -13,7 +13,7 @@ const projets = [
         links: [["Voir en HD","./src/cv.pdf"],["Télécharger le CV","./src/cv.pdf"]]
     },
     {
-        title: "Dossier de sponsoring (4L)",
+        title: "Dossier de sponsoring",
         date: 2022,
         tag: "Editorial",
         desc: `Travail réalisé pour deux amis qui projettent de récolter de l'argent pour financer leur participation au <strong>4L Trophy</strong>,
@@ -22,7 +22,7 @@ const projets = [
         links: [["Projet Behance","https://www.behance.net/gallery/137474613/4L-Trophy-Sponsoring-file"],["Photographe","https://www.instagram.com/llaridant/"],["4L Trophy","https://www.4ltrophy.com/"]]
     },
     {
-        title: "Actiris - Slide design",
+        title: "Slide design",
         date: 2022,
         tag: "Graphic Design",
         desc: `J'ai eu l'occasion de réaliser des travaux pour Actiris, tantôt pour de la communication interne,
@@ -41,6 +41,14 @@ const projets = [
         Ils ont finalement préféré utiliser un template, donc cela en est resté au stade de maquette inachevée.`,
         img: ['./src/img/nova-stim.webp'],
         links: [["Nova Stimulation","https://novastimulation.fr/"]]
+    },
+    {
+        title: "Gig's pictures",
+        date: 2021,
+        tag: "Graphic Design",
+        desc: `Travail bénévol visant à mettre en avant les services et les options proposés par un ami sur un "gig", <i>offre de service</i>, de la plateforme Fiverr.`,
+        img: ['./src/img/zagi-discord-fiverr.webp'],
+        links: [["Sa page Fiverr","https://www.fiverr.com/zagi_fpv/develop-a-professional-discord-bot-for-any-server-with-any-functionalities"]]
     },
     {
         title: "Lineflag",
