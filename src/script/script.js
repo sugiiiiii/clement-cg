@@ -126,7 +126,6 @@ for (const projet of projets) {
         pjImg.classList.add('w-full')
         pjImg.classList.add('object-cover')
         pjImg.classList.add('select-none')
-        pjImg.setAttribute('loading', 'lazy')
         i++
         try {
             pjGallery.appendChild(pjImg)
