@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Clément Cg</title>
+    <link rel="preload" as="script " href="./src/script/script.js">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="shortcut icon" href="./src/img/icon.png" type="image/x-icon">
 </head>
@@ -34,7 +35,7 @@
 
     <section class="profile flex items-center justify-center flex-col mt-8 mb-12">
         <div class="rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 || w-[8em] h-[8em] flex items-center justify-center">
-          <img src="./src/img/moi.png" class="select-none rounded-full w-24 h-24 dark:ring-slate-800 ring-white ring-8" alt="Image ronde de moi">
+          <img src="./src/img/moi.webp" class="select-none rounded-full w-24 h-24 dark:ring-slate-800 ring-white ring-8" alt="Image ronde de moi">
         </div>
         <h1 class="text-3xl font-medium mt-4 font-unbounded select-none">Clément Cœugniet</h1>
         <h2 class="text-lg mt-2 font-chivo select-none">Graphic designer</h2>
@@ -50,7 +51,7 @@
 
         <template id="projet-template">
             <div class="pj-parent || group shadow-sm bg-white hover:bg-gray-100 ring-1 ring-gray-900/10 transition-all duration-200 rounded-md dark:ring-slate-50/[0.08] dark:bg-slate-800 dark:hover:bg-slate-900" onclick="showPopup()">
-                <img src="./" alt="Image du projet" class="pj-cover || h-32 object-cover w-full object-top rounded-md">
+                <img src="./" alt="Image du projet" loading="lazy" class="pj-cover || h-32 object-cover w-full object-top rounded-md">
                 <div class="pj-info || p-4 pt-1">
                     <h3 class="pj-title || text-xl font-bold mt-2 group-hover:text-indigo-500 transition-all duration-200 font-chivo dark:group-hover:text-slate-50 dark:text-slate-300 text-slate-800">Titre</h3>
                     <p class="text-sm opacity-80 font-chivo"><span class="pj-date">0000</span> · <span class="pj-desc">Personnel</span></p>
@@ -124,6 +125,6 @@
         </div>
     </footer>
 </body>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script> -->
 <script type="text/javascript" src="./src/script/script.js"></script>
 </html>

@@ -3,6 +3,7 @@
 // ----------------------------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------------------------
 
+// Tableau contenant tous les projets
 const projets = [
     {
         title: "Mon Curriculum Vitae",
@@ -80,15 +81,17 @@ const projets = [
         tag: "Web design & Front End",
         desc: `<strong>Travail scolaire</strong> dans le cadre de mes études en Ecriture Multimédia. <br><br>
         J'ai été en charge, partagée avec deux autres étudiants, de tous les stades du projet: réfléxion, conception, design, mise en place HMTL/CSS/JS, installation sous un thème Wordpress, création de champs dynamiques avec le plugin ACF et du PHP.`,
-        img: ['./src/img/bruself.png']
+        img: ['./src/img/bruself.webp']
     },
 ]
 
 // ----------------------------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------------------------
 
+// Duplication du <template> HTML en modifier les valeurs pour chaque projets
 const projetTemplate = document.querySelector("#projet-template");
 const projetListContainer = document.querySelector("#galerie");
+// l'ID du projet permettra d'ouvrir les bonnes pop-ups au clic sur les projets
 let id = 0;
 
 for (const projet of projets) {
@@ -113,6 +116,7 @@ for (const projet of projets) {
     projetElement.querySelector(".pj-tag-pop").textContent = projet.tag;
 
     i = 0
+    // Création de la galerie d'images
     const pjGallery = projetElement.querySelector(".pj-gallery")
     for (image in projet.img) {
         // projetElement.querySelector(".pj-date-pop").textContent = projet.date;
@@ -122,6 +126,7 @@ for (const projet of projets) {
         pjImg.classList.add('w-full')
         pjImg.classList.add('object-cover')
         pjImg.classList.add('select-none')
+        pjImg.setAttribute('loading', 'lazy')
         i++
         try {
             pjGallery.appendChild(pjImg)
@@ -131,6 +136,7 @@ for (const projet of projets) {
         }
     }
 
+    // On définit les varibles pour nos liens & les boutons
     const pjLinks = projetElement.querySelector(".pj-btns")
     const linkIcons = {
         // Mot clef : icon de Iconscout
@@ -142,6 +148,7 @@ for (const projet of projets) {
         'play.google': 'uil uil-google-play'
     };
       
+    // Création des différents boutons du projet
     if (projet.links) {
         for (const link of projet.links) {
             const [linkText, linkUrl] = link;
@@ -171,6 +178,7 @@ for (const projet of projets) {
 // ----------------------------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------------------------
 
+// Pour ouvrir la pop-up, on se sert de l'ID définie en ligne 95
 function showPopup() {
     // On récuper l'attribut "pj-id" pour identifier le projet
     pjId = event.target.parentElement.getAttribute('pj-id');
@@ -206,18 +214,21 @@ popups.forEach((popEl) => {
 // ----------------------------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------------------------
 
+// Pour activer le Dark Mode
 const toggleDarkMode = () => {
     const darkIcon = document.querySelectorAll(".dark-icon");
+    // On selectionne la balise <html>
     const root = document.documentElement;
-    const darkModeIndicator = localStorage.getItem('darkModeIndicator');
+    const darkModeIndicator = localStorage.getItem('darkModeIndicator'); // Ca buggait, cette solution vient de StackOverflow
     if (darkModeIndicator === null) {
-      localStorage.setItem('darkModeIndicator', 'true');
-      root.classList.add('dark');
+        localStorage.setItem('darkModeIndicator', 'true');
+        root.classList.add('dark');
     } else if (darkModeIndicator === 'true') {
         localStorage.setItem('darkModeIndicator', 'false');
         root.classList.remove('dark');
         // popups.forEach((popEl) => {
         darkIcon.forEach(icon => {
+            // On met l'icon de soleil
             icon.innerHTML = `<path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>`
         })
     } else {
@@ -225,6 +236,7 @@ const toggleDarkMode = () => {
         console.debug('Ca va être tout noir ! (ta g...)')
         root.classList.add('dark');
         darkIcon.forEach(icon => {
+            // On met l'icon de lune
             icon.innerHTML = `<path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/>`
         })
     }
@@ -233,14 +245,15 @@ const toggleDarkMode = () => {
 // ----------------------------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------------------------
 
+// Bouton du footer pour copier le mail
 const mailLink = document.querySelector("#mailLink");
 mailLink.addEventListener('click', (event) => {
     event.preventDefault();
   
     try {
-      navigator.clipboard.writeText('clement.coeugniet@isfsc.be')
-      console.debug('Texte copié dans le presse-papiers !');
+        navigator.clipboard.writeText('clement.coeugniet@isfsc.be')
+        console.debug('Texte copié dans le presse-papiers !');
     } catch (err) {
-      console.debug('Impossible de copier le texte dans le presse-papiers');
+        console.debug('Impossible de copier le texte dans le presse-papiers');
     }
 });
