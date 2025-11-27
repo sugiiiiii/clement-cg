@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Clément Cg</title>
-    <link rel="preload" as="script " href="./src/script/script.js">
+    <link rel="preload" as="script" href="./src/script/script.js">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="shortcut icon" href="./src/img/icon.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/bme3fkc.css"> -->
 </head>
 <body class="dark:bg-slate-800 bg-white dark:text-white text-slate-900 px-5">
     <!-- Initier les styles utilisées dans des popup, pour que POSTCSS l'ajoute à l'output tailwind -->
@@ -37,7 +38,7 @@
         <div class="rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 || w-[8em] h-[8em] flex items-center justify-center">
           <img src="./src/img/moi.webp" class="select-none rounded-full w-24 h-24 dark:ring-slate-800 ring-white ring-8" alt="Image ronde de moi">
         </div>
-        <h1 class="text-3xl font-medium mt-4 font-unbounded select-none">Clément Cœugniet</h1>
+        <h1 id="blaze" class="text-3xl font-medium mt-4 font-unbounded select-none">Clément Cœugniet</h1>
         <h2 class="text-lg mt-2 font-chivo select-none">Graphic designer</h2>
     </section>
 
@@ -125,6 +126,80 @@
         </div>
     </footer>
 </body>
+<style>
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmic-regular-webfont.woff2');
+        font-weight: 200;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmic-it-webfont.woff2');
+        font-weight: 200;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmicbook-webfont.woff2');
+        font-weight: 100;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmicbook-it-webfont.woff2');
+        font-weight: 100;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmicmed-webfont.woff2');
+        font-weight: 300;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmicmed-it-webfont.woff2');
+        font-weight: 300;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmicsembd-webfont.woff2');
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmicsembd-it-webfont.woff2');
+        font-weight: 400;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmicbd-webfont.woff2');
+        font-weight: 500;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmicbd-it-webfont.woff2');
+        font-weight: 500;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmicblack-webfont.woff2');
+        font-weight: 600;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "Halyard";
+        src: url('/src/fonts/halyard/halyardmicblack-it-webfont.woff2');
+        font-weight: 600;
+        font-style: italic;
+    }
+</style>
 <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script> -->
 <script type="text/javascript" src="./src/script/script.js"></script>
 </html>
