@@ -1255,3 +1255,14 @@ video {
   }
 }
 
+div#spoiler {
+    grid-column: span 3;
+    outline: #fcbf50 1px solid;
+    padding: 1.2em;
+    border-radius: 7px;
+    background: #fab011;
+    color: black;
+    font-family: 'Chivo';
+    font-weight: 400;
+    margin-bottom: 1.5em;
+}
