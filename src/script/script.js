@@ -14,6 +14,30 @@ const projets = [
         links: [["Voir en HD","./src/cv.pdf"],["Télécharger le CV","./src/cv.pdf"]]
     },
     {
+        title: "Maitre des médias",
+        date: 2024,
+        tag: "Graphic Design",
+        desc: `<strong>Travail scolaire</strong><br>Description à rédiger`,
+        img: ['./src/img/maitre-medias-pf.webp'],
+        links: [["IHECS","https://www.ihecs.be/"]]
+    },
+    {
+        title: "L'Homme ou l'Artiste",
+        date: 2024,
+        tag: "Graphic Design",
+        desc: `<strong>Travail scolaire</strong><br>Description à rédiger`,
+        img: ['./src/img/cancel-game-pf.webp'],
+        links: [["IHECS","https://www.ihecs.be/"]]
+    },
+    {
+        title: "Housed Branding",
+        date: 2023,
+        tag: "Graphic Design",
+        desc: `Description à rédiger`,
+        img: ['./src/img/Housed-pf.webp'],
+        links: [["Housed","https://www.housed.be/"]]
+    },
+    {
         title: "Dossier de sponsoring",
         date: 2022,
         tag: "Editorial",
@@ -256,7 +280,7 @@ mailLink.addEventListener('click', (event) => {
     event.preventDefault();
   
     try {
-        navigator.clipboard.writeText('clement.coeugniet@isfsc.be')
+        navigator.clipboard.writeText('clement.coeugniet.02@gmail.com')
         console.debug('Texte copié dans le presse-papiers !');
     } catch (err) {
         console.debug('Impossible de copier le texte dans le presse-papiers');
