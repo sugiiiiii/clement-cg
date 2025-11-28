@@ -558,6 +558,9 @@ video {
 .h-32 {
   height: 8rem;
 }
+.h-36 {
+  height: 9rem; 
+}
 .h-\[600px\] {
   height: 600px;
 }
@@ -851,7 +854,7 @@ video {
   transition-duration: 150ms;
 }
 .duration-200 {
-  transition-duration: 200ms;
+  transition-duration: 150ms;
 }
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 /* @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;300;400;500&display=swap'); */
@@ -886,7 +889,7 @@ video {
   font-weight: 400;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  transition-duration: 200ms;
+  transition-duration: 150ms;
 }
 
 .btn-link:hover {
@@ -1265,4 +1268,13 @@ div#spoiler {
     font-family: 'Chivo';
     font-weight: 400;
     margin-bottom: 1.5em;
+}
+
+.pj-parent {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.pj-overlay {
+    will-change: opacity;
 }
